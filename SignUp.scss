@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+}
+
+
+.login-container{
+    display: flex;
+   gap: 250px;
+   flex-wrap: wrap;
+    
+
+   .login-left-side{
+background-image: url(Frame\ 26.png);
+width: 900px;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+
+height: 947px;
+max-width: 100%;
+max-height:100% ;
+
+
+   }
+
+   .login-right-side{
+margin-top: 100px;
+
+
+.Welcome{
+    text-align: left;
+    font-size: 35px;
+    font-weight: bolder;
+}
+
+.Continue{
+    color: #5B5B5B;
+    font-size: 13px;
+}
+
+.GoogleButton{
+padding-right: 100px;
+padding-left:100px ;
+padding-top: 20px;
+padding-bottom: 20px;
+border-radius: 30px;
+border-color: #5B5B5B;
+outline: none;
+border-width: 1px;
+background: transparent;
+cursor: pointer;
+.fa-google{
+    color: green;
+    margin-right: 20px;
+}
+
+}
+
+.Or{
+
+text-align: center;
+font-size: 20px;
+margin-top: 40px;
+margin-bottom: 40px;
+margin-right: 30px;
+
+}
+
+.EmailInput{
+   width: 350px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   padding-left: 8px;
+   border-top: none;
+   border-right: none;
+   border-left: none;
+   border-color: #B4B4B4;
+   margin-bottom: 20px;
+}
+
+.PasswordInput{
+    width: 350px;
+    max-width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 8px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-color: #B4B4B4;
+}
+
+.login-button-box{
+
+.LoginButton{
+  margin-left: 7px;
+  padding-top: 15px;
+  border-radius: 35px;
+  padding-bottom: 15px;
+  background-color: #4169E1;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 60px;
+  max-width: 100%;
+  width: 350px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.MainMenuHome{
+    margin-left: 7px;
+    padding-top: 15px;
+    border-radius: 35px;
+    padding-bottom: 15px;
+    background-color: green;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 20px;
+    max-width: 100%;
+    width: 350px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+}
+
+.ForgotPassword{
+    margin-top: 25px;
+    background: none;
+    border: none;
+    outline: none;
+    color: #4169E1;
+    cursor: pointer;
+    
+}
+
+
+   }
+}
