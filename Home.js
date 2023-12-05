@@ -2,7 +2,7 @@ const SearchInputHomePage = document.querySelector(".SearchInputHomePage")
 const SearchButton = document.querySelector(".SearchButton")
 
 
-function PostData( Searches){
+function PostData(Searches){
 
 
     const body = {
@@ -26,9 +26,11 @@ method: "POST",
 
 )  .then(response => response.json())
 .then(commits => {
+
+    
 if (body.UserSearched != null) {
     const div = document.createElement("div")
-    div.classList.add(".RecentSearchesDiv")
+    div.classList.add("RecentSearchesDiv")
 div.innerHTML = 
 `<div class="user-searches">
 <div class="Searches">
@@ -80,33 +82,33 @@ fetch("https://countriesnow.space/api/v0.1/countries/flag/images",
 
 ).then(resp => resp.json()).then(data => {
 
-const Massive = Object.values(data);
+    const Massive = Object.values(data);
 
-Massive[2].forEach(element => {
-
-    console.log(element);
-  if (SearchInputHomePage.value == element.name) {
-    const div  = document.createElement("div")
-    div.innerHTML = `<div class="card" style="width: 18rem;">
-    <img style ="" src="${element.flag}" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">${element.name}</h5>
-     
-    </div>
-  </div>`
-
-  document.querySelector(".formBox").appendChild(div)
-
-  }
+    Massive[2].forEach(element => {
+    
+        console.log(element);
+      if (SearchInputHomePage.value == element.name) {
+        const div  = document.createElement("div")
+        div.innerHTML = `<div class="card" style="width: 18rem;">
+        <img style ="" src="${element.flag}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">${element.name}</h5>
+         
+        </div>
+      </div>`
+    
+      document.querySelector(".formBox").appendChild(div)
+    
+      }
 });
 
 
 
 
+
+
+
 })
-
-
-}
 
 SearchButton.addEventListener("click", ()=> {
 
@@ -120,4 +122,4 @@ if (SearchInputHomePage.value != null) {
 
 
 
-
+}
