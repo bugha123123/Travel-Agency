@@ -1,5 +1,6 @@
-const SearchInputHomePage = document.querySelector(".SearchInputHomePage")
-const SearchButton = document.querySelector(".SearchButton")
+const SearchInputHomePage = document.querySelector("#input")
+const SearchButton = document.querySelector("#Search")
+
 
 
 function PostData(Searches){
@@ -28,7 +29,7 @@ method: "POST",
 .then(commits => {
 
     
-if (body.UserSearched != null) {
+
     const div = document.createElement("div")
     div.classList.add("RecentSearchesDiv")
 div.innerHTML = 
@@ -41,11 +42,9 @@ div.innerHTML =
 
 document.querySelector(".user-searches").appendChild(div)
 
-}else{
 
 
-    document.querySelector(".RecentSearchesDiv").remove(document.querySelector(".RecentSearchesDiv"))
-}
+
 
 
 
@@ -58,13 +57,12 @@ document.querySelector(".user-searches").appendChild(div)
 }
 
 
-SearchButton.addEventListener("click", () => {
 
-if (SearchInputHomePage.value != null) {
-    PostData(SearchInputHomePage.value)
-}
+ 
 
-})
+
+
+
 
 function GetCountries(){
 
@@ -108,18 +106,29 @@ fetch("https://countriesnow.space/api/v0.1/countries/flag/images",
 
 
 
+
+
+
+
+
+
+
+})}
+
+
+
+SearchButton.addEventListener("click", () => {
+
+       PostData(SearchInputHomePage.value);
+       GetCountries();
 })
+ 
+ 
 
-SearchButton.addEventListener("click", ()=> {
 
-if (SearchInputHomePage.value != null) {
-      GetCountries();
-}
+   
+        
   
-})
+      
+ 
 
-
-
-
-
-}
