@@ -31,18 +31,16 @@ method: "GET",
 
 const NewObject = Object.values(commits)
 
-console.log(NewObject[0]);
+
 
 const propertyValues = Object.values(commits);
 
-console.log(propertyValues);
+
 propertyValues.forEach(x=>{
 
 if (SignedUpEmail.value === x.emailAddress && Password.value === x.password) {
   document.querySelector(".Welcome").innerHTML = `Welcome ${x.emailAddress}`
-  document.querySelector('.LoginButton').style.backgroundColor = "blue"
-}else{
-   
+  alert("Logged In")
 }
 
 
