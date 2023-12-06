@@ -12,12 +12,24 @@ body{
 header{
 
 
-.DiscoverNewPlaces{
+.discover-container{
+    background-image: url(image\ 14.png);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+min-height: 1300px;
+display: flex;
+align-items: center;
+justify-content: center;
+    .DiscoverNewPlaces{
 
-color: white;
+      
+color: black;
 text-align: center;
-margin-top: 250px;
+
 font-size: 50px;
+
+}
 
 }
 
@@ -90,7 +102,8 @@ margin-top: 100px;
 .recent-searches-box{
     margin-left: 73px;
     margin-top: 100px;
-
+    overflow-x: auto;
+            overflow-y: hidden;
 
     .recent-search{
         font-size: 30px;
@@ -123,7 +136,9 @@ gap: 100px;
    padding-bottom: 25px;
    gap: 15px;
    font-size: 14px;
-   
+   flex-wrap: wrap;
+   overflow-x: auto;
+   overflow-y: hidden;
     }
     
 }

@@ -1,6 +1,6 @@
 const SearchInputHomePage = document.querySelector("#input")
 const SearchButton = document.querySelector("#Search")
-
+const logout = document.querySelector(".logout")
 
 
 function PostData(Searches){
@@ -125,7 +125,13 @@ SearchButton.addEventListener("click", () => {
  
  
 
+logout.addEventListener("click", () => {
 
+    window.localStorage.removeItem("EmailAddress");
+    
+    
+    })
+    
    
         
   

@@ -29,7 +29,7 @@ method: "GET",
 )
 .then(commits => {
 
-const NewObject = Object.values(commits)
+
 
 
 
@@ -40,8 +40,14 @@ propertyValues.forEach(x=>{
 
 if (SignedUpEmail.value === x.emailAddress && Password.value === x.password) {
   document.querySelector(".Welcome").innerHTML = `Welcome ${x.emailAddress}`
-  alert("Logged In")
+
+  window.localStorage.setItem("EmailAddress",x.emailAddress)
+  window.location.replace("/")
+
 }
+   
+  
+
 
 
 })
@@ -75,4 +81,7 @@ if (SignedUpEmail.value != null || Password.value != null) {
            
       
 })
+
+
+
 
