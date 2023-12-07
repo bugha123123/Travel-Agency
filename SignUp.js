@@ -69,3 +69,19 @@ if (Email.value != "" || Password.value != "") {
 
 
 })
+
+
+      
+const passwordshowEye = document.querySelector(".passwordshowEyeSignUp")
+   
+
+
+
+passwordshowEye.addEventListener("click", () => {
+    if (Password.type === "password") {
+        Password.type = "text";
+      } else {
+        Password.type = "password";
+      }
+    
+})

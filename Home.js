@@ -33,14 +33,16 @@ method: "POST",
     const div = document.createElement("div")
     div.classList.add("RecentSearchesDiv")
 div.innerHTML = 
-`<div class="user-searches">
-<div class="Searches">
-<i class="fas fa-location-dot"></i>
-<p class="BurjKhalifa">${body.UserSearched}</p>
+`<div class="card text-bg-light mb-3" style="max-width: 18rem;">
+<div class="card-header"><i class="fas fa-location-dot"></i></div>
+<div class="card-body">
+  <h5 class="card-title">${body.UserSearched}</h5>
+ 
 </div>
-</div>`
+</div>
+`
 
-document.querySelector(".user-searches").appendChild(div)
+document.querySelector(".RecentSearchesContainer").appendChild(div)
 
 
 

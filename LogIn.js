@@ -83,5 +83,21 @@ if (SignedUpEmail.value != null || Password.value != null) {
 })
 
 
+      
+const passwordshowEye = document.querySelector(".passwordshowEye")
+   
+
+
+
+passwordshowEye.addEventListener("click", () => {
+    if (Password.type === "password") {
+        Password.type = "text";
+      } else {
+        Password.type = "password";
+      }
+    
+})
+
+
 
 
