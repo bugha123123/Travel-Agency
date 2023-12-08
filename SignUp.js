@@ -6,9 +6,18 @@ const error = document.getElementById("Error")
 
 function GetData(email, password){
 
+
+ 
+
+
+    
+  
+    
 const body = {
     EmailAddress:email,
     Password: password
+
+    
 
 }
 
