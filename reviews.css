@@ -1,0 +1,178 @@
+header .header-container {
+  text-align: center;
+  margin-top: 200px;
+  font-weight: bolder;
+  color: #000000;
+}
+header .reviews-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  gap: 100px;
+  flex-wrap: wrap;
+}
+header .reviews-container .reviews-image #file-label {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+header .reviews-container #myForm {
+  background-color: #f2f2f2; /* A light background color for better contrast */
+  color: #333; /* A dark text color for better readability */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  width: 80%; /* Increase the width of the form */
+  max-width: 800px; /* Set a maximum width to prevent the form from becoming too wide on large screens */
+  /* Center the form */
+}
+header .reviews-container #myForm label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+header .reviews-container #myForm input[type=text],
+header .reviews-container #myForm textarea {
+  width: 100%; /* Make the input fields take up the full width of their parent */
+  padding: 15px 20px; /* Increase the padding for a more spacious feel */
+  margin: 10px 0; /* Add some margin to prevent the fields from sticking together */
+  display: inline-block;
+  border: 2px solid #ccc; /* Add a border to the input fields */
+  border-radius: 5px; /* Add rounded corners to the input fields */
+  box-sizing: border-box;
+  background-color: #fff; /* A white background color for better contrast */
+  font-size: 16px; /* Increase the font size for better readability */
+  transition: border-color 0.3s ease; /* Add a transition effect to the border color */
+}
+header .reviews-container #myForm input[type=text]:focus,
+header .reviews-container #myForm textarea:focus {
+  border-color: #4169E1; /* Change the border color when the input field is focused */
+}
+header .reviews-container #myForm input[type=submit] {
+  background-color: #4169E1; /* Use the same color as the form background for better contrast */
+  color: white; /* Use a white text color for better readability */
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+header .reviews-container #myForm input[type=submit]:hover {
+  background-color: #333; /* Change the background color when the submit button is hovered over */
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  #myForm {
+    width: 100%;
+    padding: 10px;
+  }
+  #myForm input[type=text],
+  #myForm textarea {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+  #myForm input[type=submit] {
+    padding: 10px 20px;
+  }
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  #myForm {
+    width: 90%;
+    padding: 15px;
+  }
+  #myForm input[type=text],
+  #myForm textarea {
+    padding: 12px 20px;
+    font-size: 15px;
+  }
+  #myForm input[type=submit] {
+    padding: 12px 25px;
+  }
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #myForm {
+    width: 80%;
+    padding: 20px;
+  }
+  #myForm input[type=text],
+  #myForm textarea {
+    padding: 14px 25px;
+    font-size: 16px;
+  }
+  #myForm input[type=submit] {
+    padding: 14px 30px;
+  }
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #myForm {
+    width: 70%;
+    padding: 25px;
+  }
+  #myForm input[type=text],
+  #myForm textarea {
+    padding: 16px 30px;
+    font-size: 17px;
+  }
+  #myForm input[type=submit] {
+    padding: 16px 35px;
+  }
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  #myForm {
+    width: 60%;
+    padding: 30px;
+  }
+  #myForm input[type=text],
+  #myForm textarea {
+    padding: 18px 35px;
+    font-size: 18px;
+  }
+  #myForm input[type=submit] {
+    padding: 18px 40px;
+  }
+}
+@media (max-width: 575.98px) {
+  #file-label {
+    width: 100%;
+    height: 50px;
+  }
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  #file-label {
+    width: 100%;
+    height: 70px;
+  }
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #file-label {
+    width: 100%;
+    height: 90px;
+  }
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #file-label {
+    width: 100%;
+    height: 110px;
+  }
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  #file-label {
+    width: 100%;
+    height: 130px;
+  }
+}
+#myForm input[type=text]:focus,
+#myForm textarea:focus {
+  transition: all 0.3s ease;
+  border-color: #4169E1;
+}/*# sourceMappingURL=reviews.css.map */
