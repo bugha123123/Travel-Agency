@@ -54,16 +54,6 @@ if (Email.value != "" || Password.value != "") {
     if (String(Email.value).toLowerCase().match("@")){
 
          GetData(Email.value, Password.value)
-    }else {
-
-        error.innerText = "Fill out The forms!!!"
-
-
-
-       
-
-
-
     }
       
            

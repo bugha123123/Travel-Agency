@@ -1,7 +1,7 @@
 const EmailInput = document.querySelector('.EmailInput')
 const LoginButton = document.querySelector(".LoginButton")
 const codeInput = document.querySelector(".codeInput")
-
+const fathumbsup = document.querySelector(".fa-thumbs-up")
 
 
 
@@ -10,24 +10,41 @@ function ForgotPassword(email, code){
  const body = {
 
     To:email,
-    body:code
+    body: code
  
    
 
-}
+};
 
 
-fetch("http://localhost:5161/api/sendEmail", {
 
-method: "POST",
-body: JSON.stringify(body),
-headers: {
-    "content-type":"application/json"
-}
+fetch(`http://localhost:5161/api/sendEmail`,{
+  method: "POST", 
+  body:JSON.stringify(body),
 
+      headers: {
+          "content-type":"application/json"
+      }
+      
+  
+  
+  
+  }
+  
+  
+  )  .then(response => response.text())
+  .then(commits => {
+    console.log("good");
+//working
 
-}).then(resp => resp.json()).then(data => console.log(data))
+  }
+  
 
+  
+  
+
+  
+  )
 
 }
 
@@ -36,29 +53,30 @@ headers: {
 
 LoginButton.addEventListener("click", () => {
 
-     ForgotPassword(EmailInput.value, );
+     ForgotPassword(EmailInput.value, generateString(30));
+  
     
 
    
 })
 
-const generateRandomString = (length) => {
-    const characters =
-      'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    const charactersLength = characters.length;
-    let result = '';
-  
-    // Create an array of 32-bit unsigned integers
-    const randomValues = new Uint32Array(length);
-    
-    // Generate random values
-    window.crypto.getRandomValues(randomValues);
-    randomValues.forEach((value) => {
-      result += characters.charAt(value % charactersLength);
-    });
-    return result;
-  }
+// not working yet
+fathumbsup.addEventListener("click", () => {
 
+ 
+})
+
+const characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+function generateString(length) {
+    let result = ' ';
+    const charactersLength = characters.length;
+    for ( let i = 0; i < length; i++ ) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+
+    return result;
+}
 
 
 
