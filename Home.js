@@ -134,7 +134,7 @@ SearchButton.addEventListener("click", () => {
 logout.addEventListener("click", () => {
 
     window.localStorage.removeItem("EmailAddress");
-    
+    Name.innerHTML = "";
     
     })
 
