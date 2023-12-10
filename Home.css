@@ -6,6 +6,9 @@ body {
   background-color: cadetblue;
 }
 
+header {
+  overflow: hidden;
+}
 header .discover-container {
   background-image: url(image\ 14.png);
   background-position: center;
@@ -139,4 +142,13 @@ header .pagechanger h4:hover {
 header .pagechanger h3 {
   color: rgb(55, 55, 55);
   cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  .recent-searches-container .recent-searches-box,
+  .user-searches,
+  .locationBasedOnSearchContainer,
+  .pagechanger {
+    width: 100%;
+  }
 }/*# sourceMappingURL=Home.css.map */

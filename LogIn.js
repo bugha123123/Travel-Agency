@@ -43,6 +43,7 @@ if (SignedUpEmail.value === x.emailAddress && Password.value === x.password) {
 
   window.localStorage.setItem("EmailAddress",x.emailAddress)
   window.location.replace("/")
+ 
 
 }
    

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reviews</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="reviews.css">
+    <link rel="stylesheet" href="writereviews.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
@@ -23,12 +23,8 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="index.html">Home</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Reviews</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="profile.html">Profile</a>
-              </li>
+          
+         
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Options
@@ -41,11 +37,7 @@
                 </ul>
               </li>
             </ul>
-            <div class="d-flex" role="search">
-              <input class="form-control me-2"  placeholder="Search" id="input" aria-label="Search">
-              <button class="btn btn-outline-success" id="Search">Search</button>
-              
-            </div>
+        
           </div>
         </div>
       </nav>
@@ -76,14 +68,14 @@ margin-left: auto; margin-right: auto;">
 </div>
 <form id="myForm">
  <label for="title">Title:</label><br>
- <input type="text" id="title" name="title"><br>
+ <input class="title" type="text" id="title" name="title"><br>
  <label for="titleInput">Title Input:</label><br>
- <input type="text" id="titleInput" name="titleInput"><br>
+ <input class="titleinput" type="text" id="titleInput" name="titleInput"><br>
  <label for="myReviews">My Reviews:</label><br>
- <textarea id="myReviews" name="myReviews"></textarea><br>
+ <textarea class="Myreviews" id="myReviews" name="myReviews"></textarea><br>
  <label for="locationInput">Location Input:</label><br>
- <input type="text" id="locationInput" name="locationInput"><br>
- <input type="submit" value="Submit">
+ <input class="locationInput" type="text" id="locationInput" name="locationInput"><br>
+ <input type="submit" class="SumbitButton" value="Submit">
 </form>
 
 </div>
@@ -105,7 +97,7 @@ margin-left: auto; margin-right: auto;">
 
 
 
-    <script src="reviews.js"></script>
+    <script src="writereviews.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
