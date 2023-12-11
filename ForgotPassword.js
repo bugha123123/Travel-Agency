@@ -2,7 +2,7 @@ const EmailInput = document.querySelector('.EmailInput')
 const LoginButton = document.querySelector(".LoginButton")
 const codeInput = document.querySelector(".codeInput")
 const fathumbsup = document.querySelector(".fa-thumbs-up")
-
+const ConfirmCodeInput = document.querySelector(".ConfirmCodeInput")
 
 
 function ForgotPassword(email, code){
@@ -34,8 +34,11 @@ fetch(`http://localhost:5161/api/sendEmail`,{
   
   )  .then(response => response.text())
   .then(commits => {
-    console.log("good");
-//working
+    console.log(body.body);
+
+  
+    localStorage.setItem('VerificationCode', body.body);
+
 
   }
   
@@ -53,18 +56,30 @@ fetch(`http://localhost:5161/api/sendEmail`,{
 
 LoginButton.addEventListener("click", () => {
 
-     ForgotPassword(EmailInput.value, generateString(30));
-  
+     ForgotPassword(EmailInput.value, generateString(10));
+   
     
 
    
 })
+ConfirmCodeInput.addEventListener("click", () => {
+    const generatedCode = localStorage.getItem('VerificationCode')
+    console.log(generatedCode);
+    const userInput = codeInput.value;
+console.log(userInput);   
 
-// not working yet
-fathumbsup.addEventListener("click", () => {
+if (generatedCode.trim() === userInput.trim()) {
+        window.location.replace("/");
+        localStorage.removeItem('VerificationCode'); 
+    } else {
+       alert("Wrong Verification Code");
+       localStorage.removeItem("VerificationCode")
+    }
+  });
 
- 
-})
+
+
+
 
 const characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
