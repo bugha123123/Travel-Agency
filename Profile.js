@@ -1,9 +1,9 @@
 const Name = document.querySelector(".name")
 const logout = document.querySelector(".logout")
 
-const Email = localStorage.getItem("EmailAddress")
+const UserName = localStorage.getItem("UserName")
 
-Name.innerHTML = Email;
+Name.innerHTML = UserName;
 
 
 const target = {
@@ -32,7 +32,7 @@ const target = {
   logout.addEventListener("click", ()=>{
 
 
-    localStorage.removeItem("EmailAddress");
+    localStorage.removeItem("UserName");
 
 
   })

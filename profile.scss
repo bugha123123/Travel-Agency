@@ -15,8 +15,8 @@ body {
   background: #202020;
   font-family: 'Krub', sans-serif;
 }
-
-.card {
+header{
+  .card {
   position: absolute;
   margin: auto;
   top: 0;
@@ -216,6 +216,8 @@ body {
     }
   }
 }
+}
+
 
 @keyframes fadeInMove {
   0% {

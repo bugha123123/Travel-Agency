@@ -63,6 +63,17 @@
   border-color: #B4B4B4;
   margin-bottom: 20px;
 }
+.login-container .login-right-side .UserNameInput {
+  width: 350px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 8px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-color: #B4B4B4;
+  margin-bottom: 20px;
+}
 .login-container .login-right-side .PasswordInput {
   width: 350px;
   max-width: 100%;

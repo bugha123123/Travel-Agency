@@ -2,7 +2,7 @@ const SearchInputHomePage = document.querySelector("#input")
 const SearchButton = document.querySelector("#Search")
 const logout = document.querySelector(".logout")
 
-const StorageItem = localStorage.getItem("EmailAddress")
+const StorageItem = localStorage.getItem("UserName")
 
 const Name =     document.querySelector(".name");
 Name.innerHTML = StorageItem;
@@ -133,7 +133,7 @@ SearchButton.addEventListener("click", () => {
 
 logout.addEventListener("click", () => {
 
-    window.localStorage.removeItem("EmailAddress");
+    window.localStorage.removeItem("UserName");
     Name.innerHTML = "";
     
     })

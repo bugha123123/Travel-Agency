@@ -4,8 +4,8 @@ const titleinput = document.querySelector(".titleinput")
 const Myreviews = document.querySelector(".Myreviews")
 const locationInput = document.querySelector(".locationInput")
 
-
-function PostReviews(title, titleinput, myreviews, locationinput){
+const fileInput = document.querySelector('#file-input');
+function PostReviews(title, titleinput, myreviews, locationinput, image){
 
 
  
@@ -16,6 +16,7 @@ function PostReviews(title, titleinput, myreviews, locationinput){
         TitleInput: titleinput,
         MyReviews: myreviews,
         LocationInput:locationinput,
+        Image:image
     
     }
 
@@ -39,8 +40,23 @@ SumbitButton.addEventListener("click", (e)=>{
     e.preventDefault();
 
 
-    PostReviews(title.value,titleinput.value,Myreviews.value,locationInput.value);
+  // Create a new FormData object
+  const formData = new FormData();
+
+  // Append the file data to the FormData object
+  formData.append('file', fileInput.files[0]);
+
+
+if (localStorage.getItem("UserName")) {
+        PostReviews(title.value,titleinput.value,Myreviews.value,locationInput.value,fileInput.value);
+}else{
+    alert("Log in ")
+}
+
+
 
 
   
 })
+
+

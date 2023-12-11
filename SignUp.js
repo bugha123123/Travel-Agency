@@ -2,9 +2,9 @@ const Email = document.querySelector(".EmailInput")
 const Password = document.querySelector(".PasswordInput")
 const Loginbutton = document.querySelector(".LoginButton")
 const error = document.getElementById("Error")
+const UserName = document.querySelector(".UserNameInput")
 
-
-function GetData(email, password){
+function GetData(email, password, UserName){
 
 
  
@@ -14,6 +14,7 @@ function GetData(email, password){
   
     
 const body = {
+    UserName:UserName,
     EmailAddress:email,
     Password: password
 
@@ -35,25 +36,25 @@ const body = {
     
     
     )  .then(response => response.json())
-    .then(commits => console.log(commits)
+    .then(commits => console.log(""))
     
   
     
     
   
     
-    )
+
     
     }
 
 Loginbutton.addEventListener("click", () => {
 
  
-if (Email.value != "" || Password.value != "") {
+if (Email.value != "" || Password.value != "" || UserName.value != "" ) {
 
     if (String(Email.value).toLowerCase().match("@")){
 
-         GetData(Email.value, Password.value)
+         GetData(Email.value, Password.value, UserName.value)
     }
       
            
@@ -61,7 +62,7 @@ if (Email.value != "" || Password.value != "") {
     
 
 }else{
-    console.log("Error");
+    alert("Error Try Again")
 }
     
 
