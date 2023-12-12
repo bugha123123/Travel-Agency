@@ -15,7 +15,8 @@ method: "GET",
     console.log(data)
 
 data.forEach(element => {
-    let div = document.createElement('div');
+  if (localStorage.getItem("UserName")) {
+        let div = document.createElement('div');
 div.innerHTML =  `<div class="card" style="width: 18rem; margin-left: 102px; margin-top: 50px;">
 <img src="${element.image}" class="card-img-top" alt="Empty">
 <div class="card-body">
@@ -33,8 +34,14 @@ div.innerHTML =  `<div class="card" style="width: 18rem; margin-left: 102px; mar
 </div>`
 
 document.querySelector(".myreviewscontainer").appendChild(div) 
+  }else{
+
+    document.querySelector(".myreviewscontainer").removeChild(div)
+  }
+
 
 });
 
 
 })
+
