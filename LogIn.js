@@ -35,14 +35,14 @@ console.log(commits);
 
 const propertyValues = Object.values(commits);
 
-console.log(propertyValues);
+
 propertyValues.forEach(x=>{
 
 if (SignedUpEmail.value === x.emailAddress && Password.value === x.password && UserName.value === x.userName) {
  
 
   window.localStorage.setItem("UserName",x.userName)
-  window.location.replace("/")
+  window.location.replace("/index.html")
  
 
 }
