@@ -69,7 +69,7 @@ ConfirmCodeInput.addEventListener("click", () => {
 console.log(userInput);   
 
 if (generatedCode.trim() === userInput.trim()) {
-        window.location.replace("/");
+alert("Verification Passed")
         localStorage.removeItem('VerificationCode'); 
     } else {
        alert("Wrong Verification Code");

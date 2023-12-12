@@ -42,7 +42,7 @@ if (SignedUpEmail.value === x.emailAddress && Password.value === x.password && U
  
 
   window.localStorage.setItem("UserName",x.userName)
-  window.location.replace("/index.html")
+ alert("Logged In")
  
 
 }
