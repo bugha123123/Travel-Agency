@@ -1,5 +1,5 @@
 const Name = document.querySelector(".name")
-const logout = document.querySelector(".logout")
+
 
 const UserName = localStorage.getItem("UserName")
 
@@ -33,13 +33,6 @@ const target = {
     target.btn.classList.toggle("following");
   }
 
-  logout.addEventListener("click", ()=>{
-
-
-    localStorage.removeItem("UserName");
-
-
-  })
 
 
 
