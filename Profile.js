@@ -3,7 +3,11 @@ const logout = document.querySelector(".logout")
 
 const UserName = localStorage.getItem("UserName")
 
-Name.innerHTML = UserName;
+if (UserName) {
+  Name.innerHTML = UserName;
+}else{
+  Name.innerHTML = "User"
+}
 
 
 const target = {
