@@ -57,7 +57,7 @@ fetch(`http://localhost:5161/api/sendEmail`,{
 LoginButton.addEventListener("click", () => {
 
      ForgotPassword(EmailInput.value, generateString(10));
-   
+
     
 
    
@@ -71,6 +71,7 @@ console.log(userInput);
 if (generatedCode.trim() === userInput.trim()) {
 alert("Verification Passed")
         localStorage.removeItem('VerificationCode'); 
+        window.location.replace("/resetpassword.html")
     } else {
        alert("Wrong Verification Code");
        localStorage.removeItem("VerificationCode")
