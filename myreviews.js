@@ -12,11 +12,14 @@ method: "GET",
     }
 }).then(resp => resp.json()).then(data=> {
 
-    console.log(data)
+
 
 data.forEach(element => {
   if (localStorage.getItem("UserName")) {
+    
         let div = document.createElement('div');
+
+        
 div.innerHTML =  `<div class="card" style="width: 18rem; margin-left: 102px; margin-top: 50px;">
 <img src="${element.image}" class="card-img-top" alt="Empty">
 <div class="card-body">

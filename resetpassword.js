@@ -20,11 +20,7 @@ headers: {
 
         
         
-        }).then(resp => resp.text()).then(data=> {
-
-
-            
-        })
+        }).then(resp => resp.text()).then(data=> console.log(data))
 }
 
 
