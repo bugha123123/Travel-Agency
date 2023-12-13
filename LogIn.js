@@ -43,7 +43,12 @@ if (SignedUpEmail.value === x.emailAddress && Password.value === x.password && U
 
   window.localStorage.setItem("UserName",x.userName)
  alert("Logged In")
+ window.open("index.html")
+
  
+
+}else{
+alert("Wrong Credentials")
 
 }
    

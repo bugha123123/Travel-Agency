@@ -52,9 +52,12 @@ Loginbutton.addEventListener("click", () => {
  
 if (Email.value != "" || Password.value != "" || UserName.value != "" ) {
 
-    if (String(Email.value).toLowerCase().match("@")){
+    if (String(Email.value).toLowerCase().match("@gmail")){
 
          GetData(Email.value, Password.value, UserName.value)
+         window.open("index.html")
+    }else{
+        alert("Error Try Again")
     }
       
            

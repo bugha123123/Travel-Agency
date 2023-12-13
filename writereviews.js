@@ -49,6 +49,7 @@ SumbitButton.addEventListener("click", (e)=>{
 
 if (localStorage.getItem("UserName")) {
         PostReviews(title.value,titleinput.value,Myreviews.value,locationInput.value,fileInput.value);
+        window.open("myreviews.html")
 }else{
     alert("Log in ")
 }
