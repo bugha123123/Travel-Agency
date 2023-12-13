@@ -71,7 +71,7 @@ console.log(userInput);
 if (generatedCode.trim() === userInput.trim()) {
 alert("Verification Passed")
         localStorage.removeItem('VerificationCode'); 
-        window.location.replace("/resetpassword.html")
+        window.location.href = "resetpassword.html";
     } else {
        alert("Wrong Verification Code");
        localStorage.removeItem("VerificationCode")
