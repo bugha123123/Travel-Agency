@@ -25,7 +25,13 @@ headers: {
 
 
 resetpasswordbutton.addEventListener("click", () => {
+if (ResetPasswordFirstValue.value != null ||ResetPasswordSecondValue.value != null ) {
+    UpdatePassword(ResetPasswordFirstValue.value,ResetPasswordSecondValue.value);
+    window.open("logger.html")
+}else{
+    alert("Form can't be empty")
+}
 
-UpdatePassword(ResetPasswordFirstValue.value,ResetPasswordSecondValue.value)
+
     
 })

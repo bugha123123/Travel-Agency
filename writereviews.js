@@ -37,7 +37,7 @@ headers: {
 
 SumbitButton.addEventListener("click", (e)=>{
 
-    e.preventDefault();
+ 
 
 
   // Create a new FormData object
@@ -48,8 +48,14 @@ SumbitButton.addEventListener("click", (e)=>{
 
 
 if (localStorage.getItem("UserName")) {
-        PostReviews(title.value,titleinput.value,Myreviews.value,locationInput.value,fileInput.value);
+    if (title.value != "" && titleinput.value !=  ""  && Myreviews.value !=  ""  && locationInput.value !=  "" ) {
+       PostReviews(title.value,titleinput.value,Myreviews.value,locationInput.value,fileInput.value);
         window.open("myreviews.html")
+    }else{
+alert("Inputs can't be Empty")
+  
+    }
+        
 }else{
     alert("Log in ")
 }
