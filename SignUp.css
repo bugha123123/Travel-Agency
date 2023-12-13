@@ -5,10 +5,8 @@
 .login-container {
   display: flex;
   gap: 250px;
-  flex-wrap: wrap;
 }
 .login-container .login-left-side {
-  background-image: url(Frame\ 26.png);
   width: 900px;
   background-position: center;
   background-repeat: no-repeat;
@@ -131,7 +129,6 @@
   .login-container {
     display: flex;
     gap: 250px;
-    flex-wrap: wrap;
   }
   .login-left-side {
     background-image: url(Frame\ 26.png);
@@ -153,7 +150,6 @@
   .login-container {
     display: flex;
     gap: 150px;
-    flex-wrap: wrap;
   }
   .login-left-side {
     background-image: url(Frame\ 26.png);
@@ -175,7 +171,6 @@
   .login-container {
     display: flex;
     gap: 50px;
-    flex-wrap: wrap;
   }
   .login-left-side {
     background-image: url(Frame\ 26.png);
@@ -197,7 +192,6 @@
   .login-container {
     display: flex;
     gap: 75px;
-    flex-wrap: wrap;
   }
   .login-left-side {
     background-image: url(Frame\ 26.png);

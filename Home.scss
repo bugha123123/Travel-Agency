@@ -29,12 +29,30 @@ justify-content: center;
       
 color: black;
 text-align: center;
-
+h1{
 font-size: 50px;
 
 }
 
-} overflow: hidden;
+
+}
+
+}
+@media screen and (max-width:350px) {
+    .discover-container{
+h1{
+
+font-size:20px ;
+
+}
+
+
+
+    }
+    
+}
+
+
 
 .also-featured{
 .Featured{
@@ -87,22 +105,40 @@ outline: none;
 
 .header-image-container{
 
-
 margin-top: 100px;
-
+margin-bottom: 50px;
 .image-box{
+    
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     border-radius: 20px;
     flex-wrap: wrap;
+    gap: 100px;
+    img{
+   width: 490px;
 
 
+    }
+ 
+
+
+}
+}
+@media screen and (max-width:500px) {
+ .header-image-container{
+.image-box{
+img{
+width: 80%;    
 
 }
 
 
-}
 
+}
+}   
+
+
+}
 .recent-searches-container{
 .recent-searches-box{
     margin-left: 73px;

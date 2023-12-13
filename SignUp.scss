@@ -6,11 +6,9 @@
 .login-container{
     display: flex;
    gap: 250px;
-   flex-wrap: wrap;
     
 
    .login-left-side{
-background-image: url(Frame\ 26.png);
 width: 900px;
 background-position: center;
 background-repeat: no-repeat;
@@ -25,6 +23,7 @@ max-height:100% ;
 
    .login-right-side{
 margin-top: 100px;
+
 
 
 .Welcome{
@@ -160,7 +159,6 @@ margin-right: 30px;
     .login-container{
         display: flex;
         gap: 250px;
-        flex-wrap: wrap;
     }
    
     .login-left-side{
@@ -187,7 +185,6 @@ margin-right: 30px;
     .login-container{
         display: flex;
         gap: 150px;
-        flex-wrap: wrap;
     }
    
     .login-left-side{
@@ -214,7 +211,7 @@ margin-right: 30px;
     .login-container{
         display: flex;
         gap: 50px;
-        flex-wrap: wrap;
+       
     }
    
     .login-left-side{
@@ -241,7 +238,6 @@ margin-right: 30px;
     .login-container{
         display: flex;
         gap: 75px;
-        flex-wrap: wrap;
     }
    
     .login-left-side{

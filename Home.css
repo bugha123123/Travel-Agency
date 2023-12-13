@@ -6,9 +6,6 @@ body {
   background-color: cadetblue;
 }
 
-header {
-  overflow: hidden;
-}
 header .discover-container {
   background-image: url(image\ 14.png);
   background-position: center;
@@ -24,7 +21,14 @@ header .discover-container {
 header .discover-container .DiscoverNewPlaces {
   color: black;
   text-align: center;
+}
+header .discover-container .DiscoverNewPlaces h1 {
   font-size: 50px;
+}
+@media screen and (max-width: 350px) {
+  header .discover-container h1 {
+    font-size: 20px;
+  }
 }
 header .also-featured .Featured {
   text-align: center;
@@ -66,12 +70,22 @@ header .plan-trip-container .TravelExperience {
 }
 header .header-image-container {
   margin-top: 100px;
+  margin-bottom: 50px;
 }
 header .header-image-container .image-box {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   border-radius: 20px;
   flex-wrap: wrap;
+  gap: 100px;
+}
+header .header-image-container .image-box img {
+  width: 490px;
+}
+@media screen and (max-width: 500px) {
+  header .header-image-container .image-box img {
+    width: 80%;
+  }
 }
 header .recent-searches-container .recent-searches-box {
   margin-left: 73px;
