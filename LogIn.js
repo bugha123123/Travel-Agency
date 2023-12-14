@@ -76,10 +76,16 @@ if (SignedUpEmail.value === x.emailAddress && Password.value === x.password && U
 
 LogInButton.addEventListener("click", () => {
 
-if (SignedUpEmail.value != null || Password.value != null ||UserName.value != null ) {
-   GetData()
-   
+if (localStorage.getItem("UserName")) {
+  alert("Already Logged In")
+}else{
+  if (SignedUpEmail.value != null || Password.value != null ||UserName.value != null ) {
+    GetData()
+    
+ }
 }
+
+
    
            
       

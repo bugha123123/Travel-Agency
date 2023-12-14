@@ -20,9 +20,9 @@ data.forEach(element => {
         let div = document.createElement('div');
 
         
-div.innerHTML =  `<div class="card" style="width: 18rem; margin-left: 102px; margin-top: 50px;">
+div.innerHTML =  `<div class="card col-md-6" style="width: 18rem; margin-left: 50px; margin-top: 50px;">
 <img src="${element.image}" class="card-img-top" alt="Empty">
-<div class="card-body">
+<div class="card-body ">
   <h5 class="card-title">${element.title}</h5>
   <p class="card-text">${element.titleInput}</p>
 </div>

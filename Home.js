@@ -2,7 +2,15 @@ const SearchInputHomePage = document.querySelector("#input")
 const SearchButton = document.querySelector("#Search")
 const logout = document.querySelector(".logout")
 
+
+
+
+
+
+
 const StorageItem = localStorage.getItem("UserName")
+
+
 
 const Name =     document.querySelector(".name");
 Name.innerHTML = StorageItem;
@@ -91,7 +99,7 @@ fetch("https://countriesnow.space/api/v0.1/countries/flag/images",
     Massive[2].forEach(element => {
     
         console.log(element);
-      if (SearchInputHomePage.value == element.name.toLowerCase()) {
+      if (SearchInputHomePage.value.toLowerCase() === element.name.toLowerCase()) {
         const div  = document.createElement("div")
         div.innerHTML = `<div class="card" style="width: 18rem;">
         <img style ="" src="${element.flag}" class="card-img-top" alt="...">

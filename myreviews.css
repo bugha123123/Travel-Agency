@@ -1,1 +1,6 @@
-/*# sourceMappingURL=myreviews.css.map */
+section .myreviewscontainer {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: 100%;
+}/*# sourceMappingURL=myreviews.css.map */

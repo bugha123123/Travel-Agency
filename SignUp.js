@@ -44,7 +44,7 @@ const convertedcommits = Object.values(commits)
 
         if (existingUser) {
             // A user with the specified email address already exists
-            console.error("A user with the specified email address already exists");
+       
             return;
         }
  
@@ -63,12 +63,17 @@ const convertedcommits = Object.values(commits)
 
 Loginbutton.addEventListener("click", () => {
 
- 
-if (Email.value != "" || Password.value != "" || UserName.value != "" ) {
+
+    if (localStorage.getItem("UserName")) {
+        alert("First Log Out")
+    }else{
+
+        if (Email.value != "" || Password.value != "" || UserName.value != "" ) {
 
     if (String(Email.value).toLowerCase().match("@gmail.com")){
 
-         GetData(Email.value, Password.value, UserName.value)
+         GetData(Email.value, Password.value, UserName.value);
+     alert("Signed Up")
       
     }else{
         alert("Error Try Again")
@@ -82,6 +87,9 @@ if (Email.value != "" || Password.value != "" || UserName.value != "" ) {
     alert("Error Try Again")
 }
     
+    }
+ 
+
 
 
 
