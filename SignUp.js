@@ -1,112 +1,83 @@
-const Email = document.querySelector(".EmailInput")
-const Password = document.querySelector(".PasswordInput")
-const Loginbutton = document.querySelector(".LoginButton")
-const error = document.getElementById("Error")
-const UserName = document.querySelector(".UserNameInput")
+const Email = document.querySelector(".EmailInput");
+const Password = document.querySelector(".PasswordInput");
+const Loginbutton = document.querySelector(".LoginButton");
+const error = document.getElementById("Error");
+const UserName = document.querySelector(".UserNameInput");
+const passwordshowEyeSignUp = document.querySelector(".passwordshowEyeSignUp");
 
-function GetData(email, password, UserName){
-
-
- 
-
-
-    
-  
-    
-const body = {
-    UserName:UserName,
-    EmailAddress:email,
-    Password: password
-
-    
-
+function getData(email, password, userName) {
+    return fetch("http://localhost:5161/api/user", {
+        method: "POST",
+        body: JSON.stringify({
+            UserName: userName,
+            EmailAddress: email,
+            Password: password,
+        }),
+        headers: {
+            "Content-Type": "application/json",
+        },
+    })
+    .then(response => response.json())
+    .catch(error => {
+        console.error("Error:", error);
+        return { error: "An error occurred. Please try again." };
+    });
 }
 
-    fetch(`http://localhost:5161/api/user`,{
-    method: "POST", 
-    body:JSON.stringify(body),
-        headers: {
-            "content-type":"application/json"
-        }
-        
-    
-    
-    
-    }
-    
-    
-    )  .then(response => response.json())
-    .then(commits => {
+function isGmail(email) {
+    return email.toLowerCase().includes("@gmail.com");
+}
 
-const convertedcommits = Object.values(commits)
-
-        const existingUser = convertedcommits.find(user => user.EmailAddress === email);
-
-        if (existingUser) {
-            // A user with the specified email address already exists
-       
-            return;
-        }
- 
-});
-
-    
-    
-  
-    
-    
-  
-    
-
-    
-    }
+function isEmailUnique(email) {
+    return fetch(`http://localhost:5161/api/user/${encodeURIComponent(email)}`)
+        .then(response => response.json())
+        .then(result => result);
+}
 
 Loginbutton.addEventListener("click", () => {
-
+    const email = Email.value.trim();
+    const password = Password.value.trim();
+    const userName = UserName.value.trim();
 
     if (localStorage.getItem("UserName")) {
-        alert("First Log Out")
-    }else{
-
-        if (Email.value != "" || Password.value != "" || UserName.value != "" ) {
-
-    if (String(Email.value).toLowerCase().match("@gmail.com")){
-
-         GetData(Email.value, Password.value, UserName.value);
-     alert("Signed Up")
-      
-    }else{
-        alert("Error Try Again")
+        alert("First Log Out");
+        return;
     }
-      
-           
-      
-    
 
-}else{
-    alert("Error Try Again")
-}
-    
+    if (!email || !password || !userName) {
+        alert("Error: Please fill in all the fields");
+        return;
     }
- 
 
+    if (!isGmail(email)) {
+        alert("Error: Email address must be a Gmail account");
+        return;
+    }
 
+    isEmailUnique(email)
+        .then(isUnique => {
+            if (!isUnique) {
+                alert("Error: Email Address already exists");
+            } else {
+                // Email is unique, proceed with sign up
+                getData(email, password, userName)
+                    .then(({ existingUser, error: fetchError }) => {
+                        if (fetchError) {
+                            alert(fetchError);
+                            return;
+                        }
 
+                        if (existingUser) {
+                            alert("Error: Email Address already exists");
+                        } else {
+                            alert("Signed Up");
+                        }
+                        
+                    });
+            }
+        });
+});
 
-})
-
-
-      
-const passwordshowEye = document.querySelector(".passwordshowEyeSignUp")
-   
-
-
-
-passwordshowEye.addEventListener("click", () => {
-    if (Password.type === "password") {
-        Password.type = "text";
-      } else {
-        Password.type = "password";
-      }
-    
-})
+passwordshowEyeSignUp.addEventListener("click", () => {
+    Password.type = Password.type === "password" ? "text" : "password";
+});

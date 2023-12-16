@@ -3,26 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>User Profile</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="Profilepage.css">
 </head>
 <body>
-    
-  <nav class="navbar navbar-expand-lg bg-body-black">
+  <nav class="navbar navbar-expand-lg bg-dark">
     <div class="container-fluid">
-      
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse"  id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active"  style="color: white;" aria-current="page" href="index.html">Home</a>
+            <a class="nav-link active" style="color: white;" aria-current="page" href="index.html">Home</a>
           </li>
-      
-     
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
               Options
@@ -30,67 +26,64 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="logger.html">Sign in</a></li>
               <li><a class="dropdown-item" href="signerup.html">Sign Up</a></li>
-           
             </ul>
           </li>
         </ul>
-    
       </div>
     </div>
   </nav>
 
-<header>
-  <div class="card">
-    <div class="ds-top"></div>
-    <div class="avatar-holder">
-      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1820405/profile/profile-512.jpg?1533058950" alt="Albert Einstein">
-    </div>
-    <div class="name">
-      <a href="" target="_blank"></a>
-     
-    </div>
-    <div class="button">
-      <a href="#" class="btn" onmousedown="follow();">Follow <i class="fas fa-user-plus"></i></a>
-    </div>
-    <div class="ds-info">
-      <div class="ds pens">
-        <h6 title="Number of pens created by the user">Pens <i class="fas fa-edit"></i></h6>
-        <p>29</p>
+  <header class="text-center">
+    <div class="card mx-auto mt-5" style="max-width: 400px;">
+      <div class="ds-top"></div>
+      <div class="avatar-holder">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1820405/profile/profile-512.jpg?1533058950" alt="Albert Einstein" class="img-fluid rounded-circle">
       </div>
-      <div class="ds projects">
-        <h6 title="Number of projects created by the user">Projects <i class="fas fa-project-diagram"></i></h6>
-        <p>0</p>
+      <div class="name mt-3">
+        <a href="" target="_blank" class="text-decoration-none"></a>
       </div>
-      <div class="ds posts">
-        <h6 title="Number of posts">Posts <i class="fas fa-comments"></i></h6>
-        <p>0</p>
+      <div class="button mt-3">
+        <a href="#" class="btn btn-primary" onmousedown="follow();">Follow <i class="fas fa-user-plus"></i></a>
       </div>
-    </div>
-    <div class="ds-skill">
-      <h6>Skill <i class="fa fa-code" aria-hidden="true"></i></h6>
-      <div class="skill html">
-        <h6><i class="fab fa-html5"></i> HTML5 </h6>
-        <div class="bar bar-html">
-          <p>95%</p>
+      <div class="ds-info mt-3">
+        <div class="ds pens">
+          <h6 title="Number of pens created by the user">Pens <i class="fas fa-edit"></i></h6>
+          <p>29</p>
+        </div>
+        <div class="ds projects">
+          <h6 title="Number of projects created by the user">Projects <i class="fas fa-project-diagram"></i></h6>
+          <p>0</p>
+        </div>
+        <div class="ds posts">
+          <h6 title="Number of posts">Posts <i class="fas fa-comments"></i></h6>
+          <p>0</p>
         </div>
       </div>
-      <div class="skill css">
-        <h6><i class="fab fa-css3-alt"></i> CSS3 </h6>
-        <div class="bar bar-css">
-          <p>90%</p>
+      <div class="ds-skill mt-3">
+        <h6>Skill <i class="fa fa-code" aria-hidden="true"></i></h6>
+        <div class="skill html">
+          <h6><i class="fab fa-html5"></i> HTML5 </h6>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+          </div>
         </div>
-      </div>
-      <div class="skill javascript">
-        <h6><i class="fab fa-js"></i> JavaScript </h6>
-        <div class="bar bar-js">
-          <p>75%</p>
+        <div class="skill css">
+          <h6><i class="fab fa-css3-alt"></i> CSS3 </h6>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+          </div>
+        </div>
+        <div class="skill javascript">
+          <h6><i class="fab fa-js"></i> JavaScript </h6>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<script src="Profilepage.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="Profilepage.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -5,53 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forgot Password</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="ForgotPassword.css">
 </head>
 <body>
-    <div class="login-container">
-        <div class="login-left-side">
 
+    <div class="container">
+        <div class="row justify-content-center align-items-center min-vh-100">
+            <div class="col-lg-6">
+                <div class="card p-4">
+                    <h3 class="Forgot Your Password">Forgot Your Password?</h3>
+                    <p style="font-size: 12px;">No worries, we will send you reset instructions</p>
+                    <input style="margin-top: 10px;" class="form-control mb-3 EmailInput" type="email" placeholder="Email Address">
+                    <input style="margin-top: 10px;" class="form-control mb-3 codeInput" type="text" placeholder="Enter your code">
+                    <i class="ConfirmCodeInput" style="cursor: pointer;">👍</i>
+                    <p id="Error" style="color: red;"></p>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary mb-3 LoginButton">Send Code</button>
+                        <a href="logger.html"><button class="btn btn-success MainMenuHome">Back To Login</button></a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="login-right-side">
-            <h3 class="Forgot Your Password">Forgot Your Password?</h3>
-         <p style="font-size: 12px;">No worries, we will send you reset Instructions</p>
-          
-           
+    </div>
 
-      
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <script src="ForgotPassword.js"></script>
 
-
-<input style="margin-top: 10px;"  class="EmailInput" type="Email" placeholder="Email Address">
-<br>
-<input style="margin-top: 10px;"  class="codeInput" type="text" placeholder="Enter your code"> <i class="ConfirmCodeInput" style="cursor: pointer;">👍</i>
-
-
-
-
-<p id="Error"  style="color: red;"></p>
-
-<div class="login-button-box">
-
-    
-    <button class="LoginButton">Send Code</button>
- 
-  
-   
-
-
-
-
-  <br>
- <a href="logger.html"><button class="MainMenuHome">Back To Login</button></a>   
- 
-  
-</div>
-
-
-
-<script src="ForgotPassword.js"></script>
-
-</script>
 </body>
 </html>

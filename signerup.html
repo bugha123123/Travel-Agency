@@ -5,53 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="SignUp.css">
 </head>
 <body>
-
-
-    <div class="login-container">
-        <div class="login-left-side">
-
-        </div>
-        <div class="login-right-side">
-            <h1 class="Welcome">Welcome</h1>
-         
-            <p class="Continue">Sign Up with Google or Enter Sign Up Details</p>
-            <br>
-            <br>
-            <button class="GoogleButton"> <i class="fab fa-google"></i> Continue with Google</button>
-
-            <p class="Or">or</p>
-
-            <input  class="UserNameInput" type="Email" placeholder="User Name">
-            <br>
-            <br>
-            <br>
-<input  class="EmailInput" type="Email" placeholder="Email Address">
-<br>
-<br>
-<br>
-<input  class="PasswordInput" type="password" placeholder="Password"> <i class="fas fa-eye passwordshowEyeSignUp" style="cursor: pointer; "></i>
-<br>
-<br>
-<p id="Error"  style="color: red;"></p>
-<br>
-<div class="login-button-box">
-    <button class="LoginButton">Sign Up</button>
-    <br>
-    <br>
-    <br>
-    <a href="index.html"><button class="MainMenuHome">Main Menu</button></a>   
-        
-  
-</div>
-
-
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 login-left-side">
+                <!-- Left side content goes here -->
+            </div>
+            <div class="col-md-6 login-right-side">
+                <h1 class="Welcome">Welcome User</h1>
+                <p class="Continue">Sign Up with Google or Enter Sign Up Details</p>
+                <br>
+                <br>
+                <button class="btn btn-danger GoogleButton"> <i class="fab fa-google"></i> Continue with Google</button>
+                <p class="Or">or</p>
+                <input class="form-control UserNameInput" type="text" placeholder="User Name">
+                <br>
+                <br>
+                <input class="form-control EmailInput" type="email" placeholder="Email Address">
+                <br>
+                <br>
+                <input class="form-control PasswordInput" type="password" placeholder="Password">
+                <i class="fas fa-eye passwordshowEyeSignUp" style="cursor: pointer;"></i>
+                <br>
+                <br>
+                <p id="Error" style="color: red;"></p>
+                <br>
+                <div class="login-button-box">
+                    <a href="forgot.html">Forgot Password</a>
+                    <br>
+                    <button class="btn btn-primary LoginButton">Sign Up</button>
+                    <br>
+                    <br>
+                    <br>
+                    <a href="index.html"><button class="btn btn-secondary MainMenuHome">Main Menu</button></a>
+                </div>
+            </div>
         </div>
     </div>
-    
 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="SignUp.js"></script>
 </body>
 </html>

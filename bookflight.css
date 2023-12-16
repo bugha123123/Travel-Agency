@@ -1,0 +1,44 @@
+header {
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 80px 0;
+}
+
+.book-flights-container {
+  max-width: 600px;
+  margin: auto;
+}
+
+.book-flights-heading {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#flightBookingForm {
+  max-width: 400px;
+  margin: auto;
+}
+
+.my-booked-flights {
+  margin-top: 50px;
+}
+
+.my-flights-heading {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.list-group-item {
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  margin-bottom: 10px;
+}
+
+button.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+button.btn-primary:hover {
+  background-color: #0056b3;
+}/*# sourceMappingURL=bookflight.css.map */
