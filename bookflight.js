@@ -56,13 +56,18 @@ if (localStorage.getItem("UserName")) {
                 }, 2000);
             }
         }}else{
-            alert("LOG IN FIRST")
+            alert("LOG IN FIRST");
+       
         }
     })
     .catch(error => {
         console.error('Error fetching flight information:', error);
     });
 });
+
+
+
+
 
 // Function to check if a flight is already booked
 function isFlightAlreadyBooked(from, to, time) {

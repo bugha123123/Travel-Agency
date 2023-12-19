@@ -1,8 +1,6 @@
 body {
   background-image: url(replicate-prediction-dpzr2llbddjfpmcbxyyteyzn6e.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  color: snow;
 }
 
 .navbar-nav .nav-item a.nav-link:hover {
