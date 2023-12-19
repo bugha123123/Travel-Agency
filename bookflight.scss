@@ -1,5 +1,21 @@
+body{
+    background-image: url(replicate-prediction-dpzr2llbddjfpmcbxyyteyzn6e.png);
+    background-size:cover;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+.navbar-nav .nav-item a.nav-link:hover {
+    color:whitesmoke; /* Change to your desired hover color */
+  }
+  
+  .navbar-toggler-icon {
+    background-color: #fff; /* Change to your desired color for the toggler icon */
+  }
+  
+
 header {
-    background-color: #343a40;
+    background-color:transparent;
     color: #ffffff;
     padding: 80px 0;
 }
@@ -11,7 +27,7 @@ header {
 
 .book-flights-heading {
     font-size: 2.5rem;
-    margin-bottom: 20px;
+
 }
 
 #flightBookingForm {

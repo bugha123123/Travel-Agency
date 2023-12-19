@@ -5,7 +5,18 @@
 }
 
 body {
-  background-color: cadetblue;
+ background-image: url(replicate-prediction-hn3ubv3brzqtudctep4sn55krm.png);
+ background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+.navbar-nav .nav-item a.nav-link:hover {
+  color:whitesmoke; /* Change to your desired hover color */
+}
+
+.navbar-toggler-icon {
+  background-color: #fff; /* Change to your desired color for the toggler icon */
 }
 
 
@@ -13,7 +24,7 @@ header{
 
 
 .discover-container{
-    background-image: url(image\ 14.png);
+ 
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
@@ -56,8 +67,8 @@ font-size:20px ;
 .also-featured{
 .Featured{
     text-align: center;
-    margin-top: 180px;
-    
+   
+    margin-top: -150px;
     font-size: 25px;
     color:antiquewhite;
 }
@@ -203,6 +214,8 @@ color: #404040;
 
 
 
+
+
 .pagechanger{
     width: 100%;
     display: flex;
@@ -239,8 +252,63 @@ color: #404040;
     }
     }
 
-}
 
+    
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+$primary-color: #3498db;
+$secondary-color: #fff;
+$footer-bg-color: #2c3e50;
+
+
+
+footer {
+    background-color: transparent;
+    color: $secondary-color;
+    padding: 40px 20px;
+    text-align: center;
+
+    .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+
+        li {
+            margin: 0 15px;
+
+            a {
+                text-decoration: none;
+                color: $secondary-color;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+
+    .footer-social {
+        margin-top: 20px;
+
+        a {
+            display: inline-block;
+            margin: 0 10px;
+            color: $secondary-color;
+            text-decoration: none;
+            font-size: 20px;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+}
 
 
 /* Extra small devices (phones, 600px and down) */

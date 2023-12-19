@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -5,11 +6,21 @@
 }
 
 body {
-  background-color: cadetblue;
+  background-image: url(replicate-prediction-hn3ubv3brzqtudctep4sn55krm.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.navbar-nav .nav-item a.nav-link:hover {
+  color: whitesmoke; /* Change to your desired hover color */
+}
+
+.navbar-toggler-icon {
+  background-color: #fff; /* Change to your desired color for the toggler icon */
 }
 
 header .discover-container {
-  background-image: url(image\ 14.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -34,7 +45,7 @@ header .discover-container .DiscoverNewPlaces h1 {
 }
 header .also-featured .Featured {
   text-align: center;
-  margin-top: 180px;
+  margin-top: -150px;
   font-size: 25px;
   color: antiquewhite;
 }
@@ -160,6 +171,45 @@ header .pagechanger h4:hover {
 header .pagechanger h3 {
   color: rgb(55, 55, 55);
   cursor: pointer;
+}
+
+footer {
+  background-color: transparent;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+footer .footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+footer .footer-links li {
+  margin: 0 15px;
+}
+footer .footer-links li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+footer .footer-links li a:hover {
+  color: #3498db;
+}
+footer .footer-social {
+  margin-top: 20px;
+}
+footer .footer-social a {
+  display: inline-block;
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+footer .footer-social a:hover {
+  color: #3498db;
 }
 
 /* Extra small devices (phones, 600px and down) */
