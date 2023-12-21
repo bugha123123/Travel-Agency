@@ -1,7 +1,7 @@
-document.getElementById('flightBookingForm').addEventListener('submit', function (event) {
-    event.preventDefault();
+// Function to fetch data and populate dropdowns
+function fetchDataAndPopulateDropdowns(e) {
+    e.preventDefault();
 
-    // Fetch flight information based on user input
     fetch('http://localhost:5161/api/Flights', {
         method: 'GET',
         headers: {
@@ -10,64 +10,43 @@ document.getElementById('flightBookingForm').addEventListener('submit', function
     })
     .then(response => response.json())
     .then(data => {
-        // Get user input values
-        const from = document.getElementById('fromInput').value.trim();
-        const to = document.getElementById('toInput').value.trim();
-        const time = document.getElementById('timeInput').value.trim();
-if (localStorage.getItem("UserName")) {
-    
+        // Populate "From" dropdown
+        populateDropdown('fromDropdown', data.map(flight => flight.from));
 
-        // Check if the flight is already booked
-        if (isFlightAlreadyBooked(from, to, time)) {
-            alert('You have already booked this flight.');
-        } else {
-            // Filter flights based on user input
-            const filteredFlights = data.filter(flight => {
-                return flight.from === from && flight.to === to && flight.time === time;
-            });
+        // Populate "To" dropdown
+        populateDropdown('toDropdown', data.map(flight => flight.to));
 
-            // Display booked flights dynamically
-            const bookedFlightsList = document.getElementById('bookedFlightsList');
-            let displayIndex = 1; // Counter for display
+        // Populate "Time" dropdown
+        populateDropdown('timeDropdown', data.map(flight => flight.time));
 
-            if (filteredFlights.length > 0) {
-                filteredFlights.forEach((flight) => {
-                    const listItem = document.createElement('li');
-                    listItem.classList.add('list-group-item');
-                    listItem.textContent = `Flight  From ${flight.from} to ${flight.to} - Time: ${flight.time}`;
-                    bookedFlightsList.appendChild(listItem);
-
-                    // Add the booked flight to the list of booked flights
-                    addBookedFlight(from, to, time);
-
-                    displayIndex++; // Increment display index
-                });
-            } else {
-                // Update input background color to red
-                document.getElementById('fromInput').style.backgroundColor = '#FFCCCC';
-                document.getElementById('toInput').style.backgroundColor = '#FFCCCC';
-                document.getElementById('timeInput').style.backgroundColor = '#FFCCCC';
-
-                // Reset background color after 2 seconds
-                setTimeout(() => {
-                    document.getElementById('fromInput').style.backgroundColor = '';
-                    document.getElementById('toInput').style.backgroundColor = '';
-                    document.getElementById('timeInput').style.backgroundColor = '';
-                }, 2000);
-            }
-        }}else{
-            alert("LOG IN FIRST");
-       
-        }
+        // Re-populate booked flights list from local storage
+        displayBookedFlights();
     })
     .catch(error => {
         console.error('Error fetching flight information:', error);
     });
-});
+}
 
+// Function to populate a dropdown with options
+function populateDropdown(dropdownId, options) {
+    const dropdown = document.getElementById(dropdownId);
+    // Remove existing options
+    dropdown.innerHTML = '';
+    
+    // Add default option
+    const defaultOption = document.createElement('option');
+    defaultOption.value = '';
+    defaultOption.text = 'Select an option';
+    dropdown.appendChild(defaultOption);
 
-
-
+    // Add options from the data
+    options.forEach(option => {
+        const optionElement = document.createElement('option');
+        optionElement.value = option;
+        optionElement.text = option;
+        dropdown.appendChild(optionElement);
+    });
+}
 
 // Function to check if a flight is already booked
 function isFlightAlreadyBooked(from, to, time) {
@@ -87,3 +66,68 @@ function addBookedFlight(from, to, time) {
     bookedFlights.push({ from, to, time });
     localStorage.setItem('bookedFlights', JSON.stringify(bookedFlights));
 }
+
+// Function to display booked flights from local storage
+function displayBookedFlights() {
+    const bookedFlightsList = document.getElementById('bookedFlightsList');
+    const bookedFlights = getBookedFlights();
+
+    // Clear existing content
+    bookedFlightsList.innerHTML = '';
+
+    // Display booked flights dynamically
+    bookedFlights.forEach((flight) => {
+        const listItem = document.createElement('li');
+        listItem.classList.add('list-group-item');
+        listItem.textContent = `Flight  From ${flight.from} to ${flight.to} - Time: ${flight.time}`;
+        bookedFlightsList.appendChild(listItem);
+    });
+}
+
+// Call the function to fetch data and populate dropdowns when the page loads
+document.addEventListener('DOMContentLoaded', fetchDataAndPopulateDropdowns);
+
+// Event listener for form submission
+document.getElementById('flightBookingForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const from = document.getElementById('fromDropdown').value.trim();
+    const to = document.getElementById('toDropdown').value.trim();
+    const time = document.getElementById('timeDropdown').value.trim();
+
+    if (localStorage.getItem('UserName')) {
+        // Check if the flight is already booked
+        if (isFlightAlreadyBooked(from, to, time)) {
+            alert('You have already booked this flight.');
+        } else {
+            // Display success message
+            alert(`Flight booked successfully!\nFrom: ${from}\nTo: ${to}\nTime: ${time}`);
+
+            // Display booked flights dynamically
+            const bookedFlightsList = document.getElementById('bookedFlightsList');
+            const listItem = document.createElement('li');
+            listItem.classList.add('list-group-item');
+            listItem.textContent = `Flight  From ${from} to ${to} - Time: ${time}`;
+            bookedFlightsList.appendChild(listItem);
+
+            // Add the booked flight to the list of booked flights
+            addBookedFlight(from, to, time);
+        }
+    } else {
+        alert('LOG IN FIRST');
+    }
+});
+
+// Event listener for logout button
+const logoutButton = document.querySelector(".logout");
+logoutButton.addEventListener("click", () => {
+    // Clear user name from local storage and display
+    window.localStorage.removeItem("UserName");
+  
+    // Clear booked flights list
+    const bookedFlightsList = document.getElementById('bookedFlightsList');
+    bookedFlightsList.innerHTML = '';
+
+    // Clear booked flights data from local storage
+    localStorage.removeItem('bookedFlights');
+});

@@ -25,7 +25,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link ProfileCardOpen" href="profile.html">Profile</a>
@@ -57,7 +57,6 @@
     </nav>
     
 
-    <!-- Header Section - Book Flights -->
     <header>
         <div class="container text-center">
             <h1 class="book-flights-heading mb-4">Book Your Flights</h1>
@@ -65,16 +64,22 @@
             <!-- Flight Booking Form -->
             <form id="flightBookingForm" class="mb-4">
                 <div class="mb-3">
-                    <label for="fromInput" class="form-label">From</label>
-                    <input type="text" class="form-control" id="fromInput" placeholder="Enter departure location">
+                    <label for="fromDropdown" class="form-label">From</label>
+                    <select class="form-control" id="fromDropdown">
+                        <!-- Options will be dynamically added here -->
+                    </select>
                 </div>
                 <div class="mb-3">
-                    <label for="toInput" class="form-label">To</label>
-                    <input type="text" class="form-control" id="toInput" placeholder="Enter destination location">
+                    <label for="toDropdown" class="form-label">To</label>
+                    <select class="form-control" id="toDropdown">
+                        <!-- Options will be dynamically added here -->
+                    </select>
                 </div>
                 <div class="mb-3">
-                    <label for="timeInput" class="form-label">Time</label>
-                    <input type="text" class="form-control" id="timeInput" placeholder="Enter departure time">
+                    <label for="timeDropdown" class="form-label">Time</label>
+                    <select class="form-control" id="timeDropdown">
+                        <!-- Options will be dynamically added here -->
+                    </select>
                 </div>
                 <button type="submit" class="btn btn-primary bookflightbutton">Book Flight</button>
             </form>
@@ -85,8 +90,6 @@
                 <!-- Display booked flights here -->
                 <ul class="list-group " id="bookedFlightsList">
                     <!-- Add booked flights dynamically -->
-                   
-                    <!-- ... more flights ... -->
                 </ul>
             </div>
         </div>
