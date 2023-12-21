@@ -11,8 +11,9 @@ body {
 }
 
 section .myreviewscontainer {
+  width: -moz-fit-content;
+  width: fit-content;
   display: flex;
-  gap: 10px;
+  flex-direction: row;
   flex-wrap: wrap;
-  width: 100%;
 }/*# sourceMappingURL=myreviews.css.map */

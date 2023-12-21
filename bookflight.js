@@ -88,12 +88,18 @@ function displayBookedFlights() {
 document.addEventListener('DOMContentLoaded', fetchDataAndPopulateDropdowns);
 
 // Event listener for form submission
+// Event listener for form submission
 document.getElementById('flightBookingForm').addEventListener('submit', function (event) {
     event.preventDefault();
 
     const from = document.getElementById('fromDropdown').value.trim();
     const to = document.getElementById('toDropdown').value.trim();
     const time = document.getElementById('timeDropdown').value.trim();
+
+    if (!from || !to || !time) {
+        alert('Please fill in all the required fields.');
+        return;
+    }
 
     if (localStorage.getItem('UserName')) {
         // Check if the flight is already booked
@@ -117,6 +123,7 @@ document.getElementById('flightBookingForm').addEventListener('submit', function
         alert('LOG IN FIRST');
     }
 });
+
 
 // Event listener for logout button
 const logoutButton = document.querySelector(".logout");
