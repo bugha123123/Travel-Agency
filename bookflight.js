@@ -88,42 +88,55 @@ function displayBookedFlights() {
 document.addEventListener('DOMContentLoaded', fetchDataAndPopulateDropdowns);
 
 // Event listener for form submission
-// Event listener for form submission
 document.getElementById('flightBookingForm').addEventListener('submit', function (event) {
     event.preventDefault();
 
-    const from = document.getElementById('fromDropdown').value.trim();
-    const to = document.getElementById('toDropdown').value.trim();
+    const fromDropdown = document.getElementById('fromDropdown');
+    const toDropdown = document.getElementById('toDropdown');
     const time = document.getElementById('timeDropdown').value.trim();
 
-    if (!from || !to || !time) {
-        alert('Please fill in all the required fields.');
+    // Check if "From" and "To" are the same
+    if (fromDropdown.value === toDropdown.value) {
+        alert('Please select different "From" and "To" locations.');
+        // Set background color to red for both "From" and "To" dropdowns
+        fromDropdown.style.backgroundColor = 'red';
+        toDropdown.style.backgroundColor = 'red';
+
+        // Remove red background color after 3 seconds
+        setTimeout(() => {
+            fromDropdown.style.backgroundColor = '';
+            toDropdown.style.backgroundColor = '';
+        }, 3000);
+
         return;
     }
 
+    if (!fromDropdown.value || !toDropdown.value || !time) {
+        alert('Please fill in all the required fields.');
+        return;
+    }
     if (localStorage.getItem('UserName')) {
         // Check if the flight is already booked
-        if (isFlightAlreadyBooked(from, to, time)) {
+        if (isFlightAlreadyBooked(fromDropdown.value, toDropdown.value, time)) {
             alert('You have already booked this flight.');
         } else {
             // Display success message
-            alert(`Flight booked successfully!\nFrom: ${from}\nTo: ${to}\nTime: ${time}`);
+            alert(`Flight booked successfully!\nFrom: ${fromDropdown.value}\nTo: ${toDropdown.value}\nTime: ${time}`);
 
             // Display booked flights dynamically
             const bookedFlightsList = document.getElementById('bookedFlightsList');
             const listItem = document.createElement('li');
             listItem.classList.add('list-group-item');
-            listItem.textContent = `Flight  From ${from} to ${to} - Time: ${time}`;
+            listItem.textContent = `Flight  From ${fromDropdown.value} to ${toDropdown.value} - Time: ${time}`;
             bookedFlightsList.appendChild(listItem);
 
             // Add the booked flight to the list of booked flights
-            addBookedFlight(from, to, time);
+            addBookedFlight(fromDropdown.value, toDropdown.value, time);
         }
     } else {
         alert('LOG IN FIRST');
     }
 });
-
 
 // Event listener for logout button
 const logoutButton = document.querySelector(".logout");
@@ -138,3 +151,21 @@ logoutButton.addEventListener("click", () => {
     // Clear booked flights data from local storage
     localStorage.removeItem('bookedFlights');
 });
+if (localStorage.getItem("UserName")) {
+    document.querySelector(".signinbutton").style.display = "none"
+    document.querySelector(".signupbutton").style.display = "none"
+    document.querySelector(".divider").style.display = "none"
+    document.querySelector(".ProfileCardOpen").style.display = "block"
+    document.querySelector(".googleicon").style.display = "block"
+    document.querySelector(".Options").style.display = "none"
+   
+}else{
+    document.querySelector(".signinbutton").style.display = "block"
+    document.querySelector(".signupbutton").style.display = "block"
+    document.querySelector(".divider").style.display = "block"
+    document.querySelector(".ProfileCardOpen").style.display = "none"
+    document.querySelector(".googleicon").style.display = "none"
+    document.querySelector(".Options").style.display = "block"
+  
+
+}

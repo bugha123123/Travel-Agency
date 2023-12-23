@@ -13,7 +13,7 @@ body {
 }
 
 .navbar-nav .nav-item a.nav-link:hover {
-  color: whitesmoke; /* Change to your desired hover color */
+  color: white; /* Change to your desired hover color */
 }
 
 .navbar-toggler-icon {
@@ -32,7 +32,7 @@ header .discover-container {
   justify-content: center;
 }
 header .discover-container .DiscoverNewPlaces {
-  color: black;
+  color: whitesmoke;
   text-align: center;
 }
 header .discover-container .DiscoverNewPlaces h1 {

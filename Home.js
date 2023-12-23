@@ -6,9 +6,7 @@ const userNameDisplay = document.querySelector(".name");
 const recentSearchesContainer = document.querySelector(".RecentSearchesContainer");
 const formBox = document.querySelector(".formBox");
 
-// Retrieve user name from local storage
-const storedUserName = localStorage.getItem("UserName");
-userNameDisplay.innerHTML = storedUserName;
+
 
 // Function to post user searches
 function postData(searchTerm) {
@@ -80,3 +78,23 @@ logoutButton.addEventListener("click", () => {
     window.localStorage.removeItem("UserName");
     userNameDisplay.innerHTML = "";
 });
+
+if (localStorage.getItem("UserName")) {
+    document.querySelector(".signinbutton").style.display = "none"
+    document.querySelector(".signupbutton").style.display = "none"
+    document.querySelector(".divider").style.display = "none"
+    document.querySelector(".ProfileCardOpen").style.display = "block"
+    document.querySelector(".googleicon").style.display = "block"
+    document.querySelector(".Options").style.display = "none"
+   
+}else{
+    document.querySelector(".signinbutton").style.display = "block"
+    document.querySelector(".signupbutton").style.display = "block"
+    document.querySelector(".divider").style.display = "block"
+    document.querySelector(".ProfileCardOpen").style.display = "none"
+    document.querySelector(".googleicon").style.display = "none"
+    document.querySelector(".Options").style.display = "block"
+  
+
+}
+

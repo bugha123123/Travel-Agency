@@ -48,3 +48,21 @@ document.querySelector(".myreviewscontainer").appendChild(div)
 
 })
 
+if (localStorage.getItem("UserName")) {
+  document.querySelector(".signinbutton").style.display = "none"
+  document.querySelector(".signupbutton").style.display = "none"
+  document.querySelector(".divider").style.display = "none"
+  document.querySelector(".ProfileCardOpen").style.display = "block"
+  document.querySelector(".googleicon").style.display = "block"
+  document.querySelector(".Options").style.display = "none"
+ 
+}else{
+  document.querySelector(".signinbutton").style.display = "block"
+  document.querySelector(".signupbutton").style.display = "block"
+  document.querySelector(".divider").style.display = "block"
+  document.querySelector(".ProfileCardOpen").style.display = "none"
+  document.querySelector(".googleicon").style.display = "none"
+  document.querySelector(".Options").style.display = "block"
+
+
+}

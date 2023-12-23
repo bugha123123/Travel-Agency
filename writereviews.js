@@ -28,6 +28,11 @@ function postReviews(title, titleInput, myReviews, locationInput, image) {
 }
 
 // Event listener for submit button
+//To implement length validation on inputs in your code, you can modify the event listener for the submit button to check the length of each input and display an error if it doesn't meet the specified criteria. Here's an updated version of your code:
+
+
+
+// Event listener for submit button
 submitButton.addEventListener("click", (event) => {
     event.preventDefault(); // Prevent form submission
 
@@ -38,27 +43,64 @@ submitButton.addEventListener("click", (event) => {
     formData.append('file', fileInput.files[0]);
 
     if (localStorage.getItem("UserName")) {
-        if (titleElement.value !== "" && titleInput.value !== "" && myReviewsElement.value !== "" && locationInput.value !== "") {
-            postReviews(titleElement.value, titleInput.value, myReviewsElement.value, locationInput.value, fileInput.value);
+        // Check length validation for each input
+        const titleValue = titleElement.value.trim();
+        const titleInputValue = titleInput.value.trim();
+        const myReviewsValue = myReviewsElement.value.trim();
+        const locationInputValue = locationInput.value.trim();
+
+        const maxLength = 50;
+        const minLength = 5;
+
+        if (
+            titleValue.length >= minLength && titleValue.length <= maxLength &&
+            titleInputValue.length >= minLength && titleInputValue.length <= maxLength &&
+            myReviewsValue.length >= minLength && myReviewsValue.length <= maxLength &&
+            locationInputValue.length >= minLength && locationInputValue.length <= maxLength
+        ) {
+            postReviews(titleValue, titleInputValue, myReviewsValue, locationInputValue, fileInput.value);
             window.open("myreviews.html");
         } else {
-            // Update to input background color to red
+            // Update input background color to indicate an error
             titleElement.style.backgroundColor = '#FFCCCC';
             titleInput.style.backgroundColor = '#FFCCCC';
             myReviewsElement.style.backgroundColor = '#FFCCCC';
             locationInput.style.backgroundColor = '#FFCCCC';
+            
+            // Display an error message or handle it as you prefer
+            alert('Input length should be between 5 and 50 characters.');
+
             setTimeout(() => {
                 titleElement.style.backgroundColor = "";
                 titleInput.style.backgroundColor = '';
                 myReviewsElement.style.backgroundColor = '';
                 locationInput.style.backgroundColor = '';
-            },2000);
-            // Change alerts to other warnings
-        // You can customize this message
+            }, 2000);
         }
     } else {
         // Change alerts to other warnings
-         // You can customize this message
-         alert('Please Log In')
+        // You can customize this message
+        alert('Please Log In');
     }
 });
+
+
+
+if (localStorage.getItem("UserName")) {
+    document.querySelector(".signinbutton").style.display = "none"
+    document.querySelector(".signupbutton").style.display = "none"
+    document.querySelector(".divider").style.display = "none"
+    document.querySelector(".ProfileCardOpen").style.display = "block"
+    document.querySelector(".googleicon").style.display = "block"
+    document.querySelector(".Options").style.display = "none"
+   
+}else{
+    document.querySelector(".signinbutton").style.display = "block"
+    document.querySelector(".signupbutton").style.display = "block"
+    document.querySelector(".divider").style.display = "block"
+    document.querySelector(".ProfileCardOpen").style.display = "none"
+    document.querySelector(".googleicon").style.display = "none"
+    document.querySelector(".Options").style.display = "block"
+  
+
+}
