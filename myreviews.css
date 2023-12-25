@@ -1,9 +1,12 @@
 body {
-  background-image: url(replicate-prediction-nptn4utblhckq6ncopw3hz3x7i.png);
+  background-color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .navbar-nav .nav-item a.nav-link:hover {
-  color: whitesmoke; /* Change to your desired hover color */
+  color: gray; /* Change to your desired hover color */
 }
 
 .navbar-toggler-icon {
@@ -15,5 +18,6 @@ section .myreviewscontainer {
   width: fit-content;
   display: flex;
   flex-direction: row;
+  color: black;
   flex-wrap: wrap;
 }/*# sourceMappingURL=myreviews.css.map */

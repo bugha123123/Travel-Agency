@@ -1,1 +1,1 @@
-{"version":3,"sources":["myreviews.scss","myreviews.css"],"names":[],"mappings":"AACA;EACI,0EAAA;ACAJ;;ADGA;EACI,iBAAA,EAAA,uCAAA;ACAJ;;ADGE;EACE,sBAAA,EAAA,sDAAA;ACAJ;;ADSA;EACA,uBAAA;EAAA,kBAAA;EACA,aAAA;EACA,mBAAA;EAEA,eAAA;ACPA","file":"myreviews.css"}
+{"version":3,"sources":["myreviews.scss","myreviews.css"],"names":[],"mappings":"AACA;EACE,uBAAA;EACA,sBAAA;EACD,4BAAA;EACA,2BAAA;ACAD;;ADGA;EACI,WAAA,EAAA,uCAAA;ACAJ;;ADGE;EACE,sBAAA,EAAA,sDAAA;ACAJ;;ADSA;EACA,uBAAA;EAAA,kBAAA;EACA,aAAA;EACA,mBAAA;EACA,YAAA;EACA,eAAA;ACNA","file":"myreviews.css"}

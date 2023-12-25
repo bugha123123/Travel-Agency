@@ -6,9 +6,7 @@
 
 body {
   background-color: white;
-  background-size: cover;
- background-repeat: no-repeat;
- background-position: center;
+
 }
 
 .navbar-nav .nav-item a.nav-link:hover {
@@ -25,25 +23,25 @@ header{
 
 .discover-container{
  
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-height: 1300px;
+
+margin-top: -200px;
 height: 100%;
 width: 100%;
 display: flex;
-margin-top: 150px;
+align-items: center;
+
 justify-content: center;
 
     .DiscoverNewPlaces{
 
       
 color: black;
+font-weight: bolder;
 text-align: center;
-h1{
+
 font-size: 50px;
 
-}
+
 
 
 }
@@ -69,9 +67,10 @@ font-size:20px ;
 .Featured{
     text-align: center;
    
- margin-top: -600px;
+    margin-top: -200px;
     font-size: 25px;
-    color:antiquewhite;
+    color:black;
+    font-weight: bolder;
 }
 
 .img-container-featured{
@@ -260,7 +259,7 @@ color: #404040;
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 $primary-color: #3498db;
-$secondary-color: black;
+$secondary-color: #fff;
 $footer-bg-color: #2c3e50;
 
 
@@ -283,7 +282,7 @@ footer {
 
             a {
                 text-decoration: none;
-                color: $secondary-color;
+                color: black;
                 transition: color 0.3s ease;
 
                 &:hover {
@@ -299,13 +298,13 @@ footer {
         a {
             display: inline-block;
             margin: 0 10px;
-            color: $secondary-color;
+            color: burlywood;
             text-decoration: none;
             font-size: 20px;
             transition: color 0.3s ease;
 
             &:hover {
-                color: $primary-color;
+                color: navajowhite;
             }
         }
     }

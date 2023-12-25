@@ -99,3 +99,6 @@ if (localStorage.getItem("UserName")) {
     logoutButton.style.display = "none"
 }
 
+// Example using fetch to get city information from Teleport API
+
+

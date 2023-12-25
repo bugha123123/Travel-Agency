@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Information</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+    <style>
+        /* Custom styles */
+        .container {
+            max-width: 800px;
+        }
+        #cityInformation {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: left;
+        }
+        .card {
+            width: 18rem;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            margin: 10px;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            object-fit: cover;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+
+      
+<nav class="navbar navbar-expand-lg " style="background-color:#003b95">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="image_1__5_-removebg-preview 1(1).png" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
+          <li  class="nav-item">
+            <a style="color: white;" class="nav-link" href="myreviews.html">My Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: white;" class="nav-link" href="writereviews.html">Write Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a style="color: white;" class="nav-link" href="bookflight.html">Book Flight</a>
+          </li>
+        
+        </ul>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+           
+          </li>
+        
+          <li class="nav-item dropdown">
+            <a class="nav-link googleicon" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           <img style="margin-top: 20px;height: 40px; margin-right: 15px; width: 40px;" class="googleicon" src="hacker.png"  alt="">
+        
+            </a>
+            <a href="" class="nav-link dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="margin-right: 20px; margin-top: 10px;">
+                <p class="Options" style="text-decoration: none; color:white;" href="">Options</p>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item signinbutton" href="logger.html">Sign in</a></li>
+              <li><a class="dropdown-item signupbutton" href="signerup.html">Sign Up</a></li>
+              <li><hr class="dropdown-divider divider"></li>
+              <li><a class="dropdown-item ProfileCardOpen" href="profile.html">Account</a></li>
+              <li><a class="dropdown-item logout" href="#">Log out</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="d-flex" role="search">
+          <input class="form-control me-2" placeholder="Search" id="input" aria-label="Search">
+          <button class="btn btn-outline-success" id="Search">Search</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+    <div class="container mt-5">
+        <div class="mb-3">
+            <label for="cityInput" class="form-label">Enter City Name:</label>
+            <input type="text" class="form-control" id="cityInput">
+        </div>
+        <button id="searchButton" class="btn btn-primary">Search</button>
+    </div>
+    
+    <div id="cityInformation" class="container mt-5 d-flex flex-wrap justify-content-center"></div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <script src="destinations.js"></script>

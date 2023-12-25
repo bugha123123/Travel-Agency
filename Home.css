@@ -7,9 +7,6 @@
 
 body {
   background-color: white;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .navbar-nav .nav-item a.nav-link:hover {
@@ -21,21 +18,17 @@ body {
 }
 
 header .discover-container {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 1300px;
+  margin-top: -200px;
   height: 100%;
   width: 100%;
   display: flex;
-  margin-top: 150px;
+  align-items: center;
   justify-content: center;
 }
 header .discover-container .DiscoverNewPlaces {
   color: black;
+  font-weight: bolder;
   text-align: center;
-}
-header .discover-container .DiscoverNewPlaces h1 {
   font-size: 50px;
 }
 @media screen and (max-width: 350px) {
@@ -45,9 +38,10 @@ header .discover-container .DiscoverNewPlaces h1 {
 }
 header .also-featured .Featured {
   text-align: center;
-  margin-top: -600px;
+  margin-top: -200px;
   font-size: 25px;
-  color: antiquewhite;
+  color: black;
+  font-weight: bolder;
 }
 header .also-featured .img-container-featured {
   display: flex;
@@ -175,7 +169,7 @@ header .pagechanger h3 {
 
 footer {
   background-color: transparent;
-  color: black;
+  color: #fff;
   padding: 40px 20px;
   text-align: center;
 }
@@ -203,13 +197,13 @@ footer .footer-social {
 footer .footer-social a {
   display: inline-block;
   margin: 0 10px;
-  color: black;
+  color: burlywood;
   text-decoration: none;
   font-size: 20px;
   transition: color 0.3s ease;
 }
 footer .footer-social a:hover {
-  color: #3498db;
+  color: navajowhite;
 }
 
 /* Extra small devices (phones, 600px and down) */

@@ -55,7 +55,8 @@ if (localStorage.getItem("UserName")) {
   document.querySelector(".ProfileCardOpen").style.display = "block"
   document.querySelector(".googleicon").style.display = "block"
   document.querySelector(".Options").style.display = "none"
- 
+  document.querySelector(".logout").style.display = "block"
+  document.querySelector(".divider").style.display = "block"
 }else{
   document.querySelector(".signinbutton").style.display = "block"
   document.querySelector(".signupbutton").style.display = "block"
@@ -63,6 +64,6 @@ if (localStorage.getItem("UserName")) {
   document.querySelector(".ProfileCardOpen").style.display = "none"
   document.querySelector(".googleicon").style.display = "none"
   document.querySelector(".Options").style.display = "block"
-
-
+  document.querySelector(".logout").style.display = "none"
+  document.querySelector(".divider").style.display = "none"
 }

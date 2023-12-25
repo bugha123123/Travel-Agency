@@ -1,6 +1,5 @@
 body {
-  background-image: url(replicate-prediction-dpzr2llbddjfpmcbxyyteyzn6e.png);
-  color: snow;
+  background-color: white;
 }
 
 .navbar-nav .nav-item a.nav-link:hover {
@@ -12,8 +11,8 @@ body {
 }
 
 header {
-  background-color: transparent;
-  color: #ffffff;
+  color: black;
+  font-weight: bolder;
   padding: 80px 0;
 }
 
@@ -31,6 +30,32 @@ header {
   margin: auto;
 }
 
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group:last-child {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.form-group input {
+  width: 48%;
+}
+
+.form-group button {
+  width: 48%;
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.form-group button:hover {
+  background-color: #0056b3;
+}
+
 .my-booked-flights {
   margin-top: 50px;
 }
@@ -46,11 +71,9 @@ header {
   margin-bottom: 10px;
 }
 
-button.btn-primary {
-  background-color: #007bff;
-  border: none;
-}
-
-button.btn-primary:hover {
-  background-color: #0056b3;
+@media screen and (max-width: 768px) {
+  .form-group input,
+  .form-group button {
+    width: 100%;
+  }
 }/*# sourceMappingURL=bookflight.css.map */
