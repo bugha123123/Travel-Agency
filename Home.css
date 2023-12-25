@@ -6,7 +6,7 @@
 }
 
 body {
-  background-image: url(replicate-prediction-hn3ubv3brzqtudctep4sn55krm.png);
+  background-color: white;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -28,11 +28,11 @@ header .discover-container {
   height: 100%;
   width: 100%;
   display: flex;
-  align-items: center;
+  margin-top: 150px;
   justify-content: center;
 }
 header .discover-container .DiscoverNewPlaces {
-  color: whitesmoke;
+  color: black;
   text-align: center;
 }
 header .discover-container .DiscoverNewPlaces h1 {
@@ -45,7 +45,7 @@ header .discover-container .DiscoverNewPlaces h1 {
 }
 header .also-featured .Featured {
   text-align: center;
-  margin-top: -150px;
+  margin-top: -600px;
   font-size: 25px;
   color: antiquewhite;
 }
@@ -175,7 +175,7 @@ header .pagechanger h3 {
 
 footer {
   background-color: transparent;
-  color: #fff;
+  color: black;
   padding: 40px 20px;
   text-align: center;
 }
@@ -191,7 +191,7 @@ footer .footer-links li {
 }
 footer .footer-links li a {
   text-decoration: none;
-  color: #fff;
+  color: black;
   transition: color 0.3s ease;
 }
 footer .footer-links li a:hover {
@@ -203,7 +203,7 @@ footer .footer-social {
 footer .footer-social a {
   display: inline-block;
   margin: 0 10px;
-  color: #fff;
+  color: black;
   text-decoration: none;
   font-size: 20px;
   transition: color 0.3s ease;
