@@ -38,3 +38,44 @@ if (localStorage.getItem("UserName")) {
      document.querySelector(".ProfileCardOpen").style.display = "none"
      logoutButton.style.display = "none"
  }
+
+
+ const LOCALSTORAGEEMAILADDRESS = localStorage.getItem("EmailAddress")
+
+const InputUserName = document.querySelector(".editUserName")
+
+const InputEmailAddress = document.querySelector(".editEmailAddress")
+
+const InputPassword = document.querySelector(".editPassword")
+
+
+
+async function UpdateProfileData(NewUserName, NewEmailAddress, NewPassword){
+
+const body = {
+  UserName:NewUserName,
+  EmailAddress:NewEmailAddress,
+  Password: NewPassword
+}
+
+ await fetch(`http://localhost:5161/api/Profile/${LOCALSTORAGEEMAILADDRESS}`,{
+
+    method: "PUT",
+    body: JSON.stringify(body),
+    headers: {
+        "Content-Type": "application/json"
+    }
+
+  })
+  .then(resp => resp.json()).then(data => console.log(data))
+
+
+ }
+
+document.querySelector(".update-profile-button").addEventListener("click", () => {
+
+  UpdateProfileData(InputUserName.value,InputEmailAddress.value, InputPassword )
+
+
+})
+
